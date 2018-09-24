@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="76828" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:36:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="76828" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:36:28Z">
+      <class name="com.apidemo.testCases.TestApi">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="setUp" is-config="true" duration-ms="22281" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:35:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@553a3d88]" name="radioGroup" duration-ms="14182" started-at="2018-09-24T05:35:33Z" finished-at="2018-09-24T05:35:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioGroup -->
+        <test-method status="PASS" signature="animations()[pri:2, instance:com.apidemo.testCases.TestApi@553a3d88]" name="animations" duration-ms="36406" started-at="2018-09-24T05:35:47Z" finished-at="2018-09-24T05:36:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- animations -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:35:47Z" finished-at="2018-09-24T05:35:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=radioGroup status=SUCCESS method=TestApi.radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+        <test-method status="PASS" signature="dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@553a3d88]" name="dragDrop" duration-ms="3693" started-at="2018-09-24T05:36:24Z" finished-at="2018-09-24T05:36:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dragDrop -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:36:24Z" finished-at="2018-09-24T05:36:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=animations status=SUCCESS method=TestApi.animations()[pri:2, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="tearDown" is-config="true" duration-ms="219" started-at="2018-09-24T05:36:28Z" finished-at="2018-09-24T05:36:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:36:28Z" finished-at="2018-09-24T05:36:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dragDrop status=SUCCESS method=TestApi.dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+      </class> <!-- com.apidemo.testCases.TestApi -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
