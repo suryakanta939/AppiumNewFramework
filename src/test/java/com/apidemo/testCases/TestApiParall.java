@@ -2,7 +2,6 @@ package com.apidemo.testCases;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -13,12 +12,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.apidemo.commonClasses.InvokeApplication;
 import com.apidemo.pagesClasses.Animations;
 import com.apidemo.pagesClasses.Api;
 import com.apidemo.pagesClasses.DragAndDrop;
 import com.apidemo.pagesClasses.RadioGroup;
-import com.apidemo.propertyClass.PropertyFactory;
 import com.apidemo.reportClass.ExtentFactory;
 import com.apidemo.screenshotClass.ScreenShot;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -33,7 +30,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
-public class TestApi {
+public class TestApiParall {
 	AppiumDriver<MobileElement> driver;
 	ExtentReports report;
 	ExtentTest test;
@@ -42,12 +39,23 @@ public class TestApi {
 	RadioGroup radiogroup;
 	DragAndDrop dragdrop;
 	
-	
+	@Parameters({"deviceName","udid","URL"})
 	@BeforeClass
-	public void setUp() throws IOException{
+	public void setUp(String deviceName,String udid,String URL) throws IOException{
 		report=ExtentFactory.getExtent("apitest");
 		test=report.startTest("Checking the details");
-        driver=InvokeApplication.startAppWithAPK();
+//		driver=InvokeApplication.startAppWithAPK();
+		System.out.println(URL);
+		File f=new File("ApkFolder");
+		File fs=new File(f,"ApiDemos-debug.apk");
+		System.out.println("The Path fo the apk file is "+fs.getAbsolutePath());
+		DesiredCapabilities cap=new DesiredCapabilities();
+		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
+		cap.setCapability(MobileCapabilityType.UDID, udid);
+		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 15);
+		cap.setCapability(MobileCapabilityType.APP,fs.getAbsolutePath());
+		driver=new AndroidDriver<MobileElement>(new URL(URL),cap);
 		api=new Api(driver, test);
 		radiogroup=new RadioGroup(driver, test);
 		animation=new Animations(driver, test);

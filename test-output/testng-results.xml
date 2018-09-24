@@ -1,66 +1,313 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="76828" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:36:28Z">
+  <suite name="Suite" duration-ms="80411" started-at="2018-09-24T11:26:48Z" finished-at="2018-09-24T11:28:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="76828" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:36:28Z">
+    <test name="Test on emulator" duration-ms="69732" started-at="2018-09-24T11:26:48Z" finished-at="2018-09-24T11:27:57Z">
       <class name="com.apidemo.testCases.TestApi">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="setUp" is-config="true" duration-ms="22281" started-at="2018-09-24T05:35:11Z" finished-at="2018-09-24T05:35:33Z">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="setUp" is-config="true" duration-ms="13926" started-at="2018-09-24T11:26:48Z" finished-at="2018-09-24T11:27:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[192.168.206.101:5555]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://127.0.0.2:3456/wd/hub]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@553a3d88]" name="radioGroup" duration-ms="14182" started-at="2018-09-24T05:35:33Z" finished-at="2018-09-24T05:35:47Z">
+        <test-method status="PASS" signature="radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="radioGroup" duration-ms="14936" started-at="2018-09-24T11:27:02Z" finished-at="2018-09-24T11:27:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- radioGroup -->
-        <test-method status="PASS" signature="animations()[pri:2, instance:com.apidemo.testCases.TestApi@553a3d88]" name="animations" duration-ms="36406" started-at="2018-09-24T05:35:47Z" finished-at="2018-09-24T05:36:24Z">
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="executingAfterMethod" is-config="true" duration-ms="3" started-at="2018-09-24T11:27:17Z" finished-at="2018-09-24T11:27:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=radioGroup status=SUCCESS method=TestApi.radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@5f71c76a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+        <test-method status="FAIL" signature="animations()[pri:2, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="animations" duration-ms="15750" started-at="2018-09-24T11:27:17Z" finished-at="2018-09-24T11:27:32Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Located by Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Animation']})" 
+- html content: "by id or name "animations"" (tried for 15 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Located by Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Animation']})" 
+- html content: "by id or name "animations"" (tried for 15 second(s) with 500 MILLISECONDS interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.apidemo.commonClasses.BasePage.clickOn(BasePage.java:34)
+at com.apidemo.pagesClasses.Animations.clickOnAnimation(Animations.java:48)
+at com.apidemo.testCases.TestApi.animations(TestApi.java:85)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Animation']})" 
+- html content: "by id or name "animations""
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:102)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:672)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:668)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 23 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@485b767d (tried for 1 second(s) with 500 MILLISECONDS interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:76)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:95)
+... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text='Animation']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'USER-PC', ip: '169.254.111.114', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:96)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:150)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- animations -->
-        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:35:47Z" finished-at="2018-09-24T05:35:47Z">
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="executingAfterMethod" is-config="true" duration-ms="2574" started-at="2018-09-24T11:27:32Z" finished-at="2018-09-24T11:27:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=radioGroup status=SUCCESS method=TestApi.radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+                <![CDATA[[TestResult name=animations status=FAILURE method=TestApi.animations()[pri:2, instance:com.apidemo.testCases.TestApi@5f71c76a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executingAfterMethod -->
-        <test-method status="PASS" signature="dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@553a3d88]" name="dragDrop" duration-ms="3693" started-at="2018-09-24T05:36:24Z" finished-at="2018-09-24T05:36:28Z">
+        <test-method status="FAIL" signature="dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="dragDrop" duration-ms="17090" started-at="2018-09-24T11:27:35Z" finished-at="2018-09-24T11:27:52Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Located by Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Drag and Drop']})" 
+- html content: "by id or name "dragAndDrop"" (tried for 15 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Located by Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Drag and Drop']})" 
+- html content: "by id or name "dragAndDrop"" (tried for 15 second(s) with 500 MILLISECONDS interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.apidemo.commonClasses.BasePage.clickOn(BasePage.java:34)
+at com.apidemo.pagesClasses.DragAndDrop.clickOnDragAndDrop(DragAndDrop.java:38)
+at com.apidemo.testCases.TestApi.dragDrop(TestApi.java:96)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: Locator map: 
+- native content: "By.chained({By.xpath: //android.widget.TextView[@text='Drag and Drop']})" 
+- html content: "by id or name "dragAndDrop""
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:102)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:672)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:668)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 23 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7cb67ede (tried for 1 second(s) with 500 MILLISECONDS interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:76)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:95)
+... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text='Drag and Drop']})
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'USER-PC', ip: '169.254.111.114', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:96)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:150)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dragDrop -->
-        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:36:24Z" finished-at="2018-09-24T05:36:24Z">
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="executingAfterMethod" is-config="true" duration-ms="2825" started-at="2018-09-24T11:27:52Z" finished-at="2018-09-24T11:27:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=animations status=SUCCESS method=TestApi.animations()[pri:2, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+                <![CDATA[[TestResult name=dragDrop status=FAILURE method=TestApi.dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@5f71c76a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executingAfterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="tearDown" is-config="true" duration-ms="219" started-at="2018-09-24T05:36:28Z" finished-at="2018-09-24T05:36:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apidemo.testCases.TestApi@5f71c76a]" name="tearDown" is-config="true" duration-ms="2525" started-at="2018-09-24T11:27:55Z" finished-at="2018-09-24T11:27:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@553a3d88]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T05:36:28Z" finished-at="2018-09-24T05:36:28Z">
+      </class> <!-- com.apidemo.testCases.TestApi -->
+    </test> <!-- Test on emulator -->
+    <test name="Test on real device" duration-ms="80411" started-at="2018-09-24T11:26:48Z" finished-at="2018-09-24T11:28:08Z">
+      <class name="com.apidemo.testCases.TestApi">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apidemo.testCases.TestApi@103f852]" name="setUp" is-config="true" duration-ms="27128" started-at="2018-09-24T11:26:48Z" finished-at="2018-09-24T11:27:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=dragDrop status=SUCCESS method=TestApi.dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@553a3d88] output={null}]]]>
+                <![CDATA[Android device]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[192.168.1.12:5555]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://127.0.0.1:1234/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@103f852]" name="radioGroup" duration-ms="13904" started-at="2018-09-24T11:27:15Z" finished-at="2018-09-24T11:27:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioGroup -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@103f852]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T11:27:29Z" finished-at="2018-09-24T11:27:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=radioGroup status=SUCCESS method=TestApi.radioGroup()[pri:1, instance:com.apidemo.testCases.TestApi@103f852] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executingAfterMethod -->
+        <test-method status="PASS" signature="animations()[pri:2, instance:com.apidemo.testCases.TestApi@103f852]" name="animations" duration-ms="35639" started-at="2018-09-24T11:27:29Z" finished-at="2018-09-24T11:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- animations -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@103f852]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T11:28:04Z" finished-at="2018-09-24T11:28:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=animations status=SUCCESS method=TestApi.animations()[pri:2, instance:com.apidemo.testCases.TestApi@103f852] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+        <test-method status="PASS" signature="dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@103f852]" name="dragDrop" duration-ms="3623" started-at="2018-09-24T11:28:04Z" finished-at="2018-09-24T11:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dragDrop -->
+        <test-method status="PASS" signature="executingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.apidemo.testCases.TestApi@103f852]" name="executingAfterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T11:28:08Z" finished-at="2018-09-24T11:28:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dragDrop status=SUCCESS method=TestApi.dragDrop()[pri:3, instance:com.apidemo.testCases.TestApi@103f852] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executingAfterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apidemo.testCases.TestApi@103f852]" name="tearDown" is-config="true" duration-ms="61" started-at="2018-09-24T11:28:08Z" finished-at="2018-09-24T11:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.apidemo.testCases.TestApi -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test on real device -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -10,6 +10,7 @@
           <include name="dragDrop"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="radioGroup"/>
         </methods>
       </class> <!-- com.apidemo.testCases.TestApi -->
     </classes>
